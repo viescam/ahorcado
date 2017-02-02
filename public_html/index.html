@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="vendor/boostrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="assests/css/main.css" rel="stylesheet" type="text/css"/>
+        <script src="vendor/jquery/js/jquery.min.js" type="text/javascript"></script>
+        <script src="assests/js/puzzle.js" type="text/javascript"></script>
+        <script src="assests/js/puzzle-test.js" type="text/javascript"></script>
+        <script src="assests/js/ahorcado.js" type="text/javascript"></script>
+        <script src="index.js" type="text/javascript"></script>
+        <script src="index2.js" type="text/javascript"></script>
+        
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-xs-offset-2 col-xs-3">
+                <div class="row">
+                    <div class="col-xs-2 letra" id-letra="A" draggable="true" ondragstart="onDragStartLetra(event)">A</div>
+                    <div class="col-xs-2 letra" id-letra="B" draggable="true" ondragstart="onDragStartLetra(event)">B</div>
+                    <div class="col-xs-2 letra" id-letra="C" draggable="true" ondragstart="onDragStartLetra(event)">C</div>
+                    <div class="col-xs-2 letra" id-letra="D" draggable="true" ondragstart="onDragStartLetra(event)">D</div>
+                    <div class="col-xs-2 letra" id-letra="E" draggable="true" ondragstart="onDragStartLetra(event)">E</div>
+                    <div class="col-xs-2 letra" id-letra="F" draggable="true" ondragstart="onDragStartLetra(event)">F</div>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="row">
+                    <div class="col-xs-2 letra" id-letra="G" draggable="true" ondragstart="onDragStartLetra(event)">G</div>
+                    <div class="col-xs-2 letra" id-letra="H" draggable="true" ondragstart="onDragStartLetra(event)">H</div>
+                    <div class="col-xs-2 letra" id-letra="I" draggable="true" ondragstart="onDragStartLetra(event)">I</div>
+                    <div class="col-xs-2 letra" id-letra="J" draggable="true" ondragstart="onDragStartLetra(event)">J</div>
+                    <div class="col-xs-2 letra" id-letra="K" draggable="true" ondragstart="onDragStartLetra(event)">K</div>
+                    <div class="col-xs-2 letra" id-letra="L" draggable="true" ondragstart="onDragStartLetra(event)">L</div>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="row">
+                    <div class="col-xs-2 letra" id-letra="M" draggable="true" ondragstart="onDragStartLetra(event)">M</div>
+                    <div class="col-xs-2 letra" id-letra="N" draggable="true" ondragstart="onDragStartLetra(event)">N</div>
+                    <div class="col-xs-2 letra" id-letra="O" draggable="true" ondragstart="onDragStartLetra(event)">O</div>
+                    <div class="col-xs-2 letra" id-letra="P" draggable="true" ondragstart="onDragStartLetra(event)">P</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-offset-3 col-xs-3">
+                <div class="row">
+                    <div class="col-xs-offset-2 col-xs-2 letra" id-letra="Q" draggable="true" ondragstart="onDragStartLetra(event)">Q</div>
+                    <div class="col-xs-2 letra" id-letra="R" draggable="true" ondragstart="onDragStartLetra(event)">R</div>
+                    <div class="col-xs-2 letra" id-letra="S" draggable="true" ondragstart="onDragStartLetra(event)">S</div>
+                    <div class="col-xs-2 letra" id-letra="T" draggable="true" ondragstart="onDragStartLetra(event)">T</div>
+                    <div class="col-xs-2 letra" id-letra="U" draggable="true" ondragstart="onDragStartLetra(event)">U</div>
+
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="row">
+                    <div class="col-xs-2 letra" id-letra="V" draggable="true" ondragstart="onDragStartLetra(event)">V</div> 
+                    <div class="col-xs-2 letra" id-letra="W" draggable="true" ondragstart="onDragStartLetra(event)">W</div>
+                    <div class="col-xs-2 letra" id-letra="X" draggable="true" ondragstart="onDragStartLetra(event)">X</div>
+                    <div class="col-xs-2 letra" id-letra="Y" draggable="true" ondragstart="onDragStartLetra(event)">Y</div>
+                    <div class="col-xs-2 letra" id-letra="Z" draggable="true" ondragstart="onDragStartLetra(event)">Z</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2 col-xs-offset-10" style="text-align: center">Numero de intentos</div>
+            <div class="col-xs-2 col-xs-offset-10" id="numeroIntentos" style="text-align: center"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-offset-3 col-xs-6 linea-ahorcado" ondrop="onDropLineaAhorcado(event)" ondragover="onDragOverLineaAhorcado(event)"">
+                <div class="ahorcado-content" id="contenidoPalabra" id1="contenidoPalabra"></div>
+            </div>
+        </div>
+        
+    
+    
+</div>
+</div>            
+</div>
+</body>    
+</html>

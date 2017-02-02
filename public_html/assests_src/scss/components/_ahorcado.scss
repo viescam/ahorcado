@@ -1,0 +1,47 @@
+.letra{
+    border:1px solid black;
+    background-color: lightgrey;
+    text-align: center;
+    transition: background-color 5s, transform 5s;
+}
+
+.linea-ahorcado {
+  padding: 0px;
+  border-bottom: 5px solid red;
+  height: 270px;
+  text-align: center;
+  vertical-align: bottom;
+  position: relative;
+  min-height: 150px;
+}
+.ahorcado-content {  
+    letter-spacing: 10px;
+    position:absolute;
+    width:100%;
+    bottom:0;
+    text-align:center;
+    font-size:15px;
+}
+#contenidoPalabra{
+    letter-spacing: 20px;
+    font-size: 20px;
+}
+#numeroIntentos{
+    transition: color 5s, font-size 3s;
+}
+/*.ahorcado-content {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    //left: 0;
+}*/
+#header {
+    position: relative;
+    min-height: 150px;
+}
+  #header-content {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
