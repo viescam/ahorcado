@@ -1,3 +1,4 @@
+
 var ahorcado
 $(document).ready(function() {
     var frutas = ['MANZANA','MELOCOTON','PIMIENTO'];
@@ -25,6 +26,8 @@ function modelToView(ahorcado){
         //$("#numeroIntentos").css("animation","pulse 5s infinite");
     }
     $("#numeroIntentos").text(ahorcado.intentos);
+    srcImg = "assests/img/"+(6-ahorcado.intentos)+".jpg";
+    $("#imagenAhorcado").attr("src", srcImg);
 }
 
 
