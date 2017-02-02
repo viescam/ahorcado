@@ -18,8 +18,11 @@ function modelToView(ahorcado){
     //alert(palabraAMostrar);
     $("#contenidoPalabra").text(palabraAMostrar);
     if(ahorcado.intentos<3){
-        //$("#numeroIntentos").css({"color":"red","font-size":"20px","animation" : "pulse 5s infinite"});
-        $("#numeroIntentos").css("animation","pulse 5s infinite");
+        
+        $("#numeroIntentos").css({"color":"red","font-size":"30px"});
+        $('#numeroIntentos').addClass('animated bounceIn infinite');
+        //$("#numeroIntentos").css("transform", "scale(2,2)");
+        //$("#numeroIntentos").css("animation","pulse 5s infinite");
     }
     $("#numeroIntentos").text(ahorcado.intentos);
 }
@@ -41,10 +44,10 @@ function onDropLineaAhorcado(event){
         ahorcado.colocarLetra(letraAColocar);
         if(ahorcado.existeLetraEnPalabra(letraAColocar)){
             $(elementLetra).css("background-color","green");
-            $(elementLetra).css("transform", "scale(0.75,0.75)");
+            $(elementLetra).css("transform", "scale(0.8,0.8)");
         }else{
             $(elementLetra).css("background-color","red");
-            $(elementLetra).css("transform", "scale(0.5,0.5)");
+            $(elementLetra).css("transform", "scale(0.6,0.6)");
         }
 	$(elementLetra).removeAttr("draggable");
 };
