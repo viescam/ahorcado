@@ -16,11 +16,11 @@ function modelToView(ahorcado){
             }
 
     $("#contenidoPalabra").text(palabraAMostrar);
-    $("#numeroIntentos").text(ahorcado.intentos);
-        srcImg = "assests/img/"+(6-ahorcado.intentos)+".jpg";
+    $("#numeroIntentos").text(ahorcado.getNumIntentos);
+        srcImg = "assests/img/"+(6-ahorcado.getNumIntentos)+".jpg";
         $("#imagenAhorcado").attr("src", srcImg);
     if(ahorcado.isFinalizado()===0){
-        if(ahorcado.intentos<3){
+        if(ahorcado.getNumIntentos<3){
             $("#numeroIntentos").css({"color":"red","font-size":"40px"});            
             $('#numeroIntentos').addClass('animated bounceIn infinite');            
         }
