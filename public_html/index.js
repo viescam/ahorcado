@@ -1,8 +1,9 @@
 var ahorcado;
 $(document).ready(function() {
-    var frutas = ['MANZANA','MELOCOTON','PIMIENTO'];
-    var aleatorio = Math.round(Math.random()*2);
+    var frutas = ['MANZANA','MELOCOTON','PIMIENTO','ALBARICOQUE','KIWI','PLATANO'];
+    var aleatorio = Math.round(Math.random()*5);
     ahorcado = new Ahorcado(frutas[aleatorio],modelToView,6);
+    $('#modalAhorcado').on('hidden.bs.modal', closeModal);
 });
 
 function modelToView(ahorcado){
@@ -26,6 +27,7 @@ function modelToView(ahorcado){
             $('#numeroIntentos').addClass('animated bounceIn infinite');            
         }
     }else{
+        $('#numeroIntentos').removeClass('animated bounceIn infinite');
         $(".letra").attr("draggable","false");
         if(ahorcado.isFinalizado()>0){
             showModalVictoria(ahorcado.getNumIntentos());            
@@ -62,7 +64,7 @@ function showModalDerrota(palabra){
 };
 
 function closeModal(){
-    $('#numeroIntentos').removeClass('animated bounceIn infinite');
+    //$('#numeroIntentos').removeClass('animated bounceIn infinite');
     $("#volverAJugar").addClass('animated fadeInDown');
     $(".linea-ahorcado").css('display','none');
 }
