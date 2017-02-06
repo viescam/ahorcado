@@ -1,14 +1,22 @@
+.title-page{
+    background-color: darkcyan;
+    color:white;
+}
+.subtitle-page{
+    background-color: lightcyan;
+    color:darkcyan;
+}
 .letra{
     border:1px solid black;
-    background-color: lightgrey;
+    background-color: lightcyan;
     text-align: center;
     transition: background-color 5s, transform 5s;
 }
 
 .linea-ahorcado {
   padding: 0px;
-  border:1px solid black;
-  border-bottom: 5px solid red;
+  border:1px solid cyan;
+  border-bottom: 5px solid darkcyan;
   height: 100px;
   text-align: center;
   vertical-align: bottom;
