@@ -1,32 +1,21 @@
-.hueco-caja {
-  width: 336px;
-  height: 200px;
-  border: 1px solid; }
-
-.hueco-tablero {
-  padding: 0px;
-  border: 1px solid;
-  width: 427px;
-  height: 270px; }
-
 .title-page {
   background-color: darkcyan;
   color: white; }
 
 .subtitle-page {
-  background-color: lightcyan;
-  color: darkcyan; }
+  background-color: #e6ffff;
+  color: teal; }
 
 .letra {
   border: 1px solid black;
-  background-color: lightcyan;
+  background-color: #e6ffff;
   text-align: center;
   transition: background-color 5s, transform 5s; }
 
 .linea-ahorcado {
   padding: 0px;
-  border: 1px solid cyan;
-  border-bottom: 5px solid darkcyan;
+  border: 1px solid #99ffff;
+  border-bottom: 5px solid teal;
   height: 100px;
   text-align: center;
   vertical-align: bottom;
