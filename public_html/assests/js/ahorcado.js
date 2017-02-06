@@ -1,5 +1,4 @@
 function Ahorcado(palabra,modelToView,numIntentos){
-   // alert(palabra);
     if(palabra.length<1)
         throw "Se ha producido un error. Para jugar la palabra debe de existir";
     else
@@ -23,30 +22,22 @@ Ahorcado.prototype.reset=function(){
     for(i=0;i<this.letras.length;i++){
         this.estado[i]=false;
     }
-    //this.intentos=6;
     this.modelToView(this);
 };
 
 Ahorcado.prototype.colocarLetra=function(letra){
     
     if(this.isLetra(letra)){
-        //alert(letra);
         if(this.existeLetraEnPalabra(letra)){
             var pos = this.getPosicionLetraEnPalabra(letra);
             for(i=0;i<pos.length;i++){
-                this.estado[pos[i]]=true;
-                
-            }
-            
+                this.estado[pos[i]]=true;                
+            }            
         }else{
-            //this.intentos--;
-            this.restarUnIntento();
-        }
-        
+             this.restarUnIntento();
+        }        
         this.modelToView(this);
-        //return existeLetraEnPalabra(letra);
     }else{
-        //alert("El juego solo permite emplear letras");
         throw "El juego solo permite emplear letras";
     }
         

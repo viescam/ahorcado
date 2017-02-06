@@ -23,7 +23,8 @@
   text-align: center;
   vertical-align: bottom;
   position: relative;
-  min-height: 150px; }
+  min-height: 150px;
+  display: block; }
 
 .ahorcado-content {
   letter-spacing: 10px;
@@ -55,3 +56,11 @@
   position: absolute;
   bottom: 0;
   left: 0; }
+
+#containerVolverAJugar {
+  display: none; }
+
+/*#volverAJugar{
+    //visibility: hidden;
+    display:none;
+}*/
