@@ -1,4 +1,4 @@
-var ahorcado
+var ahorcado;
 $(document).ready(function() {
     var frutas = ['MANZANA','MELOCOTON','PIMIENTO'];
     var aleatorio = Math.round(Math.random()*2);
@@ -21,18 +21,14 @@ function modelToView(ahorcado){
         $("#imagenAhorcado").attr("src", srcImg);
     if(ahorcado.isFinalizado()===0){
         if(ahorcado.intentos<3){
-
-            $("#numeroIntentos").css({"color":"red","font-size":"30px"});
-            $('#numeroIntentos').addClass('animated bounceIn infinite');
-            
+            $("#numeroIntentos").css({"color":"red","font-size":"40px"});            
+            $('#numeroIntentos').addClass('animated bounceIn infinite');            
         }
-        
     }else{
         $(".letra").attr("draggable","false");
         if(ahorcado.isFinalizado()>0){
             showModalVictoria(ahorcado.getNumIntentos());            
         }else{
-            alert(ahorcado.palabra);
             showModalDerrota(ahorcado.palabra);            
         }
     }
@@ -48,7 +44,9 @@ function showModalVictoria(numIntentos){
     
     modalWindow.find('.modal-title').text('GANASTE!!!');
     modalWindow.find('.modal-body p').text('ENHORABUENA!!!. Has ganado, y con '+numIntentos+' intentos restantes');
+    modalWindow.find('.modal-body p').addClass("alert alert-success");  
     modalWindow.find('#recargaPagina').text('Jugar otra partida');    
+    modalWindow.find('#recargaPagina').addClass("btn-success");    
 };
 
 function showModalDerrota(palabra){
@@ -57,18 +55,19 @@ function showModalDerrota(palabra){
     
     modalWindow.find('.modal-title').text('PERDISTE!!!');
     modalWindow.find('.modal-body p').text('OHH!. Has perdido!. La palabra era '+palabra+". Ánimo para la siguiente partida");
-    modalWindow.find('#recargaPagina').text('Volver a intentarlo');    
+    modalWindow.find('.modal-body p').addClass("alert alert-warning");  
+    modalWindow.find('#recargaPagina').text('Volver a intentarlo');  
+    modalWindow.find('#recargaPagina').addClass("btn-warning");  
 };
 
 function closeModal(){
-    
-    $("#containerVolverAJugar").css("display","inline-block");
-    //$("#volverAJugar").css("display","inline-block");
-    $(".linea-ahorcado").css("display","none");
+    $('#numeroIntentos').removeClass('animated bounceIn infinite');
+    $("#volverAJugar").addClass('animated fadeInDown');
+    $(".linea-ahorcado").css('display','none');
 }
 
 function onDragStartLetra(event){
-	event.dataTransfer.setData("text", $(event.target).attr("id-letra"));
+    event.dataTransfer.setData("text", $(event.target).attr("id-letra"));
 };
 
 function onDropLineaAhorcado(event){
@@ -76,7 +75,7 @@ function onDropLineaAhorcado(event){
     var idLetra = event.dataTransfer.getData("text");
 	var elementLetra = $("[id-letra='"+idLetra+"']");
 	var lineaAhorcado = event.target;
-	var letraAColocar = $(elementLetra).text()
+	var letraAColocar = $(elementLetra).text();
         ahorcado.colocarLetra(letraAColocar);
         if(ahorcado.existeLetraEnPalabra(letraAColocar)){
             $(elementLetra).css("background-color","green");
