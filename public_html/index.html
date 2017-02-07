@@ -85,8 +85,8 @@ and open the template in the editor.
             </div>
             <div class="col-xs-2 col-xs-offset-7"><h3 class="text-center">Numero de intentos</h3></div>
             <div class="col-xs-2 col-xs-offset-7"><h3 class="text-center" id="numeroIntentos"></h3></div>
-            <div class="col-xs-6 linea-ahorcado" ondrop="onDropLineaAhorcado(event)" ondragover="onDragOverLineaAhorcado(event)">
-                <div class="ahorcado-content" id="contenidoPalabra" id1="contenidoPalabra" ></div>
+            <div class="col-xs-6 ahorcado-content " ondrop="onDropLineaAhorcado(event)" ondragover="onDragOverLineaAhorcado(event)">
+                <div class="linea-ahorcado" id="contenidoPalabra" id1="contenidoPalabra" ></div>
             </div>
             <br><br>
             <div class="col-xs-6 text-center" id="containerVolverAJugar">
@@ -100,7 +100,7 @@ and open the template in the editor.
                       
 
             <!-- Modal -->
-            <div class="modal fade" id="modalAhorcado" role="dialog">
+            <div class="modal fade" id="modalAhorcado" role="dialog" data-backdrop="static" data-keyboard="false">
                 <div class="modal-dialog">
 
                     <!-- Modal content-->

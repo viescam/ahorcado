@@ -1,9 +1,9 @@
 .title-page {
-  background-color: cyan;
+  background-color: teal;
   color: white; }
 
 .subtitle-page {
-  background-color: #e6ffff;
+  background-color: #b3ffff;
   color: teal; }
 
 .letra {
@@ -12,7 +12,7 @@
   text-align: center;
   transition: background-color 5s, transform 5s; }
 
-.linea-ahorcado {
+.ahorcado-content {
   padding: 0px;
   border: 1px solid #99ffff;
   border-bottom: 5px solid teal;
@@ -23,17 +23,13 @@
   min-height: 150px;
   display: block; }
 
-.ahorcado-content {
-  letter-spacing: 10px;
+.linea-ahorcado {
   position: absolute;
   width: 100%;
   bottom: 0;
   text-align: center;
-  font-size: 15px; }
-
-#contenidoPalabra {
   letter-spacing: 20px;
-  font-size: 20px; }
+  font-size: 30px; }
 
 #numeroIntentos {
   transition: color 5s, font-size 3s;

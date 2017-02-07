@@ -14,7 +14,7 @@ function modelToView(ahorcado){
         }else{
             palabraAMostrar+="_";
         }
-            }
+    }
 
     $("#contenidoPalabra").text(palabraAMostrar);
     $("#numeroIntentos").text(ahorcado.getNumIntentos());
@@ -44,6 +44,10 @@ function reloadPage(){
 function showModalVictoria(numIntentos){
     var modalWindow = $("#modalAhorcado");
     modalWindow.modal('show');
+    modalWindow.modal({
+        backdrop: 'static',
+        keyboard: false
+    })
     
     modalWindow.find('.modal-title').text('GANASTE!!!');
     modalWindow.find('.modal-body p').text('ENHORABUENA!!!. Has ganado, y con '+numIntentos+' intentos restantes');
@@ -55,7 +59,10 @@ function showModalVictoria(numIntentos){
 function showModalDerrota(palabra){
     var modalWindow = $("#modalAhorcado");
     modalWindow.modal('show');
-    
+    modalWindow.modal({
+        backdrop: 'static',
+        keyboard: false
+    })
     modalWindow.find('.modal-title').text('PERDISTE!!!');
     modalWindow.find('.modal-body p').text('OHH!. Has perdido!. La palabra era '+palabra+". Ánimo para la siguiente partida");
     modalWindow.find('.modal-body p').addClass("alert alert-warning");  
@@ -64,9 +71,8 @@ function showModalDerrota(palabra){
 };
 
 function closeModal(){
-    //$('#numeroIntentos').removeClass('animated bounceIn infinite');
     $("#volverAJugar").addClass('animated fadeInDown');
-    $(".linea-ahorcado").css('display','none');
+    $(".ahorcado-content").css('display','none');
 }
 
 function onDragStartLetra(event){
